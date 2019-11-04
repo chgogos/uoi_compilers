@@ -9,10 +9,15 @@ void printDay(int offset){
 }
 
 %}
-
+TODAY TODAY
+YESTERDAY YESTERDAY
+POSITIVE_INTEGER [1-9][0-9]*
+TODAY_PLUS_N {TODAY}\+{POSITIVE_INTEGER}
 %%
-
+{TODAY} printDay(0);
+{YESTERDAY} printDay(-1);
+{TODAY_PLUS_N}
 %%
-void main(){
+int main(){
     yylex();
 }
