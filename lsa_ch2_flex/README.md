@@ -42,7 +42,7 @@
 
 ## Παράδειγμα 5
 
-Επιστροφή σημασιολογικής τιμής μέσω της yyval
+Επιστροφή σημασιολογικής τιμής μέσω της yyval  (x)
 
     $ flex -o example5.c example5.flex
     $ gcc -o example5 example5.c  -lfl

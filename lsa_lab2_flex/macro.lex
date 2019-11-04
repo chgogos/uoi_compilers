@@ -1,3 +1,7 @@
+POSITIVE_INTEGER    [1-9][0-9]*
+TODAY_PLUS_N        TODAY\+{POSITIVE_INTEGER}
+TODAY_MINUS_N       TODAY\-{POSITIVE_INTEGER}
+
 %{
 #include <time.h>
 
@@ -9,14 +13,19 @@ void printDay(int offset){
 }
 
 %}
-TODAY TODAY
-YESTERDAY YESTERDAY
-POSITIVE_INTEGER [1-9][0-9]*
-TODAY_PLUS_N {TODAY}\+{POSITIVE_INTEGER}
+
 %%
-{TODAY} printDay(0);
-{YESTERDAY} printDay(-1);
-{TODAY_PLUS_N}
+TODAY printDay(0);
+YESTERDAY printDay(-1);
+TOMORROW printDay(1);
+{TODAY_PLUS_N}  { 
+                    char* c = strchr(yytext, '+');
+                    printDay(atoi(c));
+                }
+{TODAY_MINUS_N} { 
+                    char* c = strchr(yytext, '-');
+                    printDay(atoi(c));
+                }
 %%
 int main(){
     yylex();
