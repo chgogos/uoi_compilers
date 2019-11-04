@@ -1,0 +1,5 @@
+If TODAY is Pancake Day then TOMORROW is Ash Wednesday and TODAY+47 is
+Easter Sunday.
+
+If YESTERDAY is Christmas Day then TODAY is Boxing Day and TODAY+6 is
+New Years Day.
