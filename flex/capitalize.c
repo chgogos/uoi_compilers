@@ -1,6 +1,6 @@
-#line 1 "example5.c"
+#line 1 "capitalize.c"
 
-#line 3 "example5.c"
+#line 3 "capitalize.c"
 
 #define  YY_INT_ALIGNED short int
 
@@ -352,8 +352,8 @@ static void yynoreturn yy_fatal_error ( const char* msg  );
 	(yy_hold_char) = *yy_cp; \
 	*yy_cp = '\0'; \
 	(yy_c_buf_p) = yy_cp;
-#define YY_NUM_RULES 3
-#define YY_END_OF_BUFFER 4
+#define YY_NUM_RULES 2
+#define YY_END_OF_BUFFER 3
 /* This struct is not used in this scanner,
    but its presence is necessary. */
 struct yy_trans_info
@@ -363,17 +363,17 @@ struct yy_trans_info
 	};
 static const flex_int16_t yy_accept[8] =
     {   0,
-        0,    0,    4,    1,    2,    2,    0
+        0,    0,    3,    1,    2,    1,    0
     } ;
 
 static const YY_CHAR yy_ec[256] =
     {   0,
+        1,    1,    1,    1,    1,    1,    1,    1,    2,    2,
+        1,    1,    2,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    2,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    2,    2,    2,
-        2,    2,    2,    2,    2,    2,    2,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
@@ -405,12 +405,12 @@ static const YY_CHAR yy_meta[3] =
 
 static const flex_int16_t yy_base[9] =
     {   0,
-        0,    0,    4,    5,    0,    0,    5,    1
+        0,    0,    4,    0,    5,    0,    5,    2
     } ;
 
 static const flex_int16_t yy_def[9] =
     {   0,
-        7,    1,    7,    7,    8,    8,    0,    7
+        7,    1,    7,    8,    7,    8,    0,    7
     } ;
 
 static const flex_int16_t yy_nxt[8] =
@@ -437,12 +437,13 @@ int yy_flex_debug = 0;
 #define YY_MORE_ADJ 0
 #define YY_RESTORE_YY_MORE_OFFSET
 char *yytext;
-#line 1 "example5.lex"
-#line 2 "example5.lex"
-    typedef enum {END, NUM} Token;
-    extern int yylval;
-#line 444 "example5.c"
-#line 445 "example5.c"
+#line 1 "capitalize.lex"
+#line 2 "capitalize.lex"
+    #include <stdio.h>
+    #include <ctype.h>
+    int x;
+#line 445 "capitalize.c"
+#line 446 "capitalize.c"
 
 #define INITIAL 0
 
@@ -659,9 +660,10 @@ YY_DECL
 		}
 
 	{
-#line 6 "example5.lex"
+#line 8 "capitalize.lex"
 
-#line 664 "example5.c"
+
+#line 666 "capitalize.c"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -719,29 +721,26 @@ do_action:	/* This label is used only to access EOF actions. */
 			goto yy_find_action;
 
 case 1:
-/* rule 1 can match eol */
 YY_RULE_SETUP
-#line 7 "example5.lex"
-
+#line 10 "capitalize.lex"
+{
+            x++;
+            for(int i=0;i<yyleng;i++){
+                printf("%c",toupper(yytext[i]));
+            }
+            return 1;
+        }
+	YY_BREAK
+case YY_STATE_EOF(INITIAL):
+#line 18 "capitalize.lex"
+{return 0;}  // ctrl+d για mac
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 8 "example5.lex"
-{
-                yylval = atoi(yytext);
-                return NUM;
-            }
-	YY_BREAK
-case YY_STATE_EOF(INITIAL):
-#line 12 "example5.lex"
-{return END;}
-	YY_BREAK
-case 3:
-YY_RULE_SETUP
-#line 14 "example5.lex"
+#line 20 "capitalize.lex"
 ECHO;
 	YY_BREAK
-#line 744 "example5.c"
+#line 743 "capitalize.c"
 
 	case YY_END_OF_BUFFER:
 		{
@@ -1744,10 +1743,11 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 14 "example5.lex"
+#line 20 "capitalize.lex"
 
 
 int main(){
-    while (yylex() != END)
-        printf("NUM(%i)\n", yylval);
+    while(yylex()==1){
+        printf(">>>%d\n", x);
+    }
 }
