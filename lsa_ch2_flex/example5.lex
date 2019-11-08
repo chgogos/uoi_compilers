@@ -1,7 +1,6 @@
 %{
-    #include <y.tab.h>
+    #include "y.tab.h"
     typedef enum {END, NUM} Token;
-    extern int yylval;
 %}
 
 %%
