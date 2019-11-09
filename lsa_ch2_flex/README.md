@@ -57,3 +57,8 @@
     $ flex -o exercise1.c exercise1.flex
     $ gcc -o exercise1 exercise1.c  -lfl
     ./exercise1 data1.txt
+
+
+
+[./exercise2.lex]
+
