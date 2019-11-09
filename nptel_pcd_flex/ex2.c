@@ -1,6 +1,6 @@
-#line 1 "macro.c"
+#line 1 "ex2.c"
 
-#line 3 "macro.c"
+#line 3 "ex2.c"
 
 #define  YY_INT_ALIGNED short int
 
@@ -352,8 +352,8 @@ static void yynoreturn yy_fatal_error ( const char* msg  );
 	(yy_hold_char) = *yy_cp; \
 	*yy_cp = '\0'; \
 	(yy_c_buf_p) = yy_cp;
-#define YY_NUM_RULES 6
-#define YY_END_OF_BUFFER 7
+#define YY_NUM_RULES 4
+#define YY_END_OF_BUFFER 5
 /* This struct is not used in this scanner,
    but its presence is necessary. */
 struct yy_trans_info
@@ -361,25 +361,23 @@ struct yy_trans_info
 	flex_int32_t yy_verify;
 	flex_int32_t yy_nxt;
 	};
-static const flex_int16_t yy_accept[32] =
+static const flex_int16_t yy_accept[12] =
     {   0,
-        0,    0,    7,    6,    6,    6,    0,    0,    0,    0,
-        0,    0,    0,    0,    1,    0,    0,    0,    0,    0,
-        0,    4,    5,    0,    0,    4,    5,    3,    0,    2,
+        3,    3,    5,    3,    2,    1,    3,    3,    1,    3,
         0
     } ;
 
 static const YY_CHAR yy_ec[256] =
     {   0,
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    2,
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    3,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    2,    1,    3,    1,    1,    4,    5,    5,
-        5,    5,    5,    5,    5,    5,    5,    1,    1,    1,
-        1,    1,    1,    1,    6,    1,    1,    7,    8,    1,
-        1,    1,    1,    1,    1,    1,    9,    1,   10,    1,
-        1,   11,   12,   13,    1,    1,   14,    1,   15,    1,
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
 
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
@@ -401,46 +399,33 @@ static const YY_CHAR yy_ec[256] =
         1,    1,    1,    1,    1
     } ;
 
-static const YY_CHAR yy_meta[16] =
+static const YY_CHAR yy_meta[4] =
     {   0,
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1
+        1,    2,    1
     } ;
 
-static const flex_int16_t yy_base[33] =
+static const flex_int16_t yy_base[14] =
     {   0,
-        0,    1,   39,   40,   28,   29,    0,   24,   29,   24,
-       20,   17,   20,   22,    0,   18,   17,   22,   21,   15,
-       17,    0,    6,    9,   16,   13,   15,   40,    6,   40,
-       40,    0
+        9,    0,   10,    0,   12,   12,    3,    0,   12,    0,
+       12,    6,    8
     } ;
 
-static const flex_int16_t yy_def[33] =
+static const flex_int16_t yy_def[14] =
     {   0,
-       32,   32,   31,   31,   31,   31,   31,   31,   31,   31,
-       31,   31,   31,   31,   31,   31,   31,   31,   31,   31,
-       31,   31,   31,   31,   31,   31,   31,   31,   31,   31,
-        0,   31
+       12,   11,   11,   13,   11,   11,   11,   13,   11,    7,
+        0,   11,   11
     } ;
 
-static const flex_int16_t yy_nxt[56] =
+static const flex_int16_t yy_nxt[16] =
     {   0,
-        4,   18,   19,   26,   26,   31,    9,   31,   10,   27,
-       27,   31,    5,    5,    6,    6,   26,   26,   27,   27,
-       30,   29,   28,   25,   24,   23,   22,   21,   20,   17,
-       16,   15,   14,   13,   12,   11,    8,    7,   31,    3,
-       31,   31,   31,   31,   31,   31,   31,   31,   31,   31,
-       31,   31,   31,   31,   31
+        4,    6,    7,    8,    9,   10,    4,    4,    8,   11,
+        5,    3,   11,   11,   11
     } ;
 
-static const flex_int16_t yy_chk[56] =
+static const flex_int16_t yy_chk[16] =
     {   0,
-       32,   15,   15,   22,   22,    0,    7,    0,    7,   23,
-       23,    0,    1,    2,    1,    2,   26,   26,   27,   27,
-       29,   25,   24,   21,   20,   19,   18,   17,   16,   14,
-       13,   12,   11,   10,    9,    8,    6,    5,    3,   31,
-       31,   31,   31,   31,   31,   31,   31,   31,   31,   31,
-       31,   31,   31,   31,   31
+        2,    2,    2,    7,    7,    7,   12,   12,   13,    3,
+        1,   11,   11,   11,   11
     } ;
 
 static yy_state_type yy_last_accepting_state;
@@ -457,19 +442,8 @@ int yy_flex_debug = 0;
 #define YY_MORE_ADJ 0
 #define YY_RESTORE_YY_MORE_OFFSET
 char *yytext;
-#line 1 "macro.lex"
-#line 6 "macro.lex"
-#include <time.h>
-
-void printDay(int offset){
-    char date[32];
-    time_t t = time(NULL) + offset * 86400;
-    strftime(date, 32, "%d %B", localtime(&t));
-    printf("%s", date);
-}
-
-#line 471 "macro.c"
-#line 472 "macro.c"
+#line 1 "ex2.lex"
+#line 446 "ex2.c"
 
 #define INITIAL 0
 
@@ -649,6 +623,9 @@ extern int yylex (void);
 #endif
 
 #define YY_RULE_SETUP \
+	if ( yyleng > 0 ) \
+		YY_CURRENT_BUFFER_LVALUE->yy_at_bol = \
+				(yytext[yyleng - 1] == '\n'); \
 	YY_USER_ACTION
 
 /** The main scanner function which does all the work.
@@ -686,9 +663,10 @@ YY_DECL
 		}
 
 	{
-#line 17 "macro.lex"
+#line 1 "ex2.lex"
 
-#line 691 "macro.c"
+
+#line 669 "ex2.c"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -703,6 +681,7 @@ YY_DECL
 		yy_bp = yy_cp;
 
 		yy_current_state = (yy_start);
+		yy_current_state += YY_AT_BOL();
 yy_match:
 		do
 			{
@@ -715,13 +694,13 @@ yy_match:
 			while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 				{
 				yy_current_state = (int) yy_def[yy_current_state];
-				if ( yy_current_state >= 32 )
+				if ( yy_current_state >= 12 )
 					yy_c = yy_meta[yy_c];
 				}
 			yy_current_state = yy_nxt[yy_base[yy_current_state] + yy_c];
 			++yy_cp;
 			}
-		while ( yy_base[yy_current_state] != 40 );
+		while ( yy_base[yy_current_state] != 12 );
 
 yy_find_action:
 		yy_act = yy_accept[yy_current_state];
@@ -746,42 +725,28 @@ do_action:	/* This label is used only to access EOF actions. */
 			goto yy_find_action;
 
 case 1:
+/* rule 1 can match eol */
 YY_RULE_SETUP
-#line 18 "macro.lex"
-printDay(0);
+#line 3 "ex2.lex"
+
 	YY_BREAK
 case 2:
+/* rule 2 can match eol */
 YY_RULE_SETUP
-#line 19 "macro.lex"
-printDay(-1);
+#line 4 "ex2.lex"
+{ECHO; yylineno++;}
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 20 "macro.lex"
-printDay(1);
+#line 5 "ex2.lex"
+{printf("%d\t%s", yylineno, yytext);}
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 21 "macro.lex"
-{ 
-                    char* c = strchr(yytext, '+');
-                    printDay(atoi(c));
-                }
-	YY_BREAK
-case 5:
-YY_RULE_SETUP
-#line 25 "macro.lex"
-{ 
-                    char* c = strchr(yytext, '-');
-                    printDay(atoi(c));
-                }
-	YY_BREAK
-case 6:
-YY_RULE_SETUP
-#line 29 "macro.lex"
+#line 7 "ex2.lex"
 ECHO;
 	YY_BREAK
-#line 784 "macro.c"
+#line 749 "ex2.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1066,6 +1031,7 @@ static int yy_get_next_buffer (void)
 	char *yy_cp;
     
 	yy_current_state = (yy_start);
+	yy_current_state += YY_AT_BOL();
 
 	for ( yy_cp = (yytext_ptr) + YY_MORE_ADJ; yy_cp < (yy_c_buf_p); ++yy_cp )
 		{
@@ -1078,7 +1044,7 @@ static int yy_get_next_buffer (void)
 		while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 			{
 			yy_current_state = (int) yy_def[yy_current_state];
-			if ( yy_current_state >= 32 )
+			if ( yy_current_state >= 12 )
 				yy_c = yy_meta[yy_c];
 			}
 		yy_current_state = yy_nxt[yy_base[yy_current_state] + yy_c];
@@ -1106,11 +1072,11 @@ static int yy_get_next_buffer (void)
 	while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 		{
 		yy_current_state = (int) yy_def[yy_current_state];
-		if ( yy_current_state >= 32 )
+		if ( yy_current_state >= 12 )
 			yy_c = yy_meta[yy_c];
 		}
 	yy_current_state = yy_nxt[yy_base[yy_current_state] + yy_c];
-	yy_is_jam = (yy_current_state == 31);
+	yy_is_jam = (yy_current_state == 11);
 
 		return yy_is_jam ? 0 : yy_current_state;
 }
@@ -1225,6 +1191,8 @@ static int yy_get_next_buffer (void)
 	c = *(unsigned char *) (yy_c_buf_p);	/* cast for 8-bit char's */
 	*(yy_c_buf_p) = '\0';	/* preserve yytext */
 	(yy_hold_char) = *++(yy_c_buf_p);
+
+	YY_CURRENT_BUFFER_LVALUE->yy_at_bol = (c == '\n');
 
 	return c;
 }
@@ -1786,8 +1754,12 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 29 "macro.lex"
+#line 7 "ex2.lex"
 
-int main(){
+
+int main()
+{
+    yylineno=1;
     yylex();
 }
+

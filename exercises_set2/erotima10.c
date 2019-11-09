@@ -1,6 +1,6 @@
-#line 1 "macro.c"
+#line 1 "erotima10.c"
 
-#line 3 "macro.c"
+#line 3 "erotima10.c"
 
 #define  YY_INT_ALIGNED short int
 
@@ -352,8 +352,8 @@ static void yynoreturn yy_fatal_error ( const char* msg  );
 	(yy_hold_char) = *yy_cp; \
 	*yy_cp = '\0'; \
 	(yy_c_buf_p) = yy_cp;
-#define YY_NUM_RULES 6
-#define YY_END_OF_BUFFER 7
+#define YY_NUM_RULES 3
+#define YY_END_OF_BUFFER 4
 /* This struct is not used in this scanner,
    but its presence is necessary. */
 struct yy_trans_info
@@ -361,12 +361,9 @@ struct yy_trans_info
 	flex_int32_t yy_verify;
 	flex_int32_t yy_nxt;
 	};
-static const flex_int16_t yy_accept[32] =
+static const flex_int16_t yy_accept[9] =
     {   0,
-        0,    0,    7,    6,    6,    6,    0,    0,    0,    0,
-        0,    0,    0,    0,    1,    0,    0,    0,    0,    0,
-        0,    4,    5,    0,    0,    4,    5,    3,    0,    2,
-        0
+        0,    0,    4,    3,    1,    2,    1,    0
     } ;
 
 static const YY_CHAR yy_ec[256] =
@@ -375,16 +372,16 @@ static const YY_CHAR yy_ec[256] =
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    2,    1,    3,    1,    1,    4,    5,    5,
-        5,    5,    5,    5,    5,    5,    5,    1,    1,    1,
-        1,    1,    1,    1,    6,    1,    1,    7,    8,    1,
-        1,    1,    1,    1,    1,    1,    9,    1,   10,    1,
-        1,   11,   12,   13,    1,    1,   14,    1,   15,    1,
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    1,    1,    1,    1,    2,    2,    2,
+        2,    2,    2,    2,    2,    2,    2,    1,    1,    1,
+        1,    1,    1,    1,    3,    3,    3,    3,    3,    3,
+        3,    3,    3,    3,    3,    3,    3,    3,    3,    3,
+        3,    3,    3,    3,    3,    3,    3,    3,    3,    3,
+        1,    1,    1,    1,    1,    1,    3,    3,    3,    3,
 
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        3,    3,    3,    3,    3,    3,    3,    3,    3,    3,
+        3,    3,    3,    3,    3,    3,    3,    3,    3,    3,
+        3,    3,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
@@ -401,46 +398,29 @@ static const YY_CHAR yy_ec[256] =
         1,    1,    1,    1,    1
     } ;
 
-static const YY_CHAR yy_meta[16] =
+static const YY_CHAR yy_meta[4] =
     {   0,
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1
+        1,    2,    1
     } ;
 
-static const flex_int16_t yy_base[33] =
+static const flex_int16_t yy_base[10] =
     {   0,
-        0,    1,   39,   40,   28,   29,    0,   24,   29,   24,
-       20,   17,   20,   22,    0,   18,   17,   22,   21,   15,
-       17,    0,    6,    9,   16,   13,   15,   40,    6,   40,
-       40,    0
+        0,    0,    5,    6,    0,    6,    0,    6,    2
     } ;
 
-static const flex_int16_t yy_def[33] =
+static const flex_int16_t yy_def[10] =
     {   0,
-       32,   32,   31,   31,   31,   31,   31,   31,   31,   31,
-       31,   31,   31,   31,   31,   31,   31,   31,   31,   31,
-       31,   31,   31,   31,   31,   31,   31,   31,   31,   31,
-        0,   31
+        8,    1,    8,    8,    9,    8,    9,    0,    8
     } ;
 
-static const flex_int16_t yy_nxt[56] =
+static const flex_int16_t yy_nxt[10] =
     {   0,
-        4,   18,   19,   26,   26,   31,    9,   31,   10,   27,
-       27,   31,    5,    5,    6,    6,   26,   26,   27,   27,
-       30,   29,   28,   25,   24,   23,   22,   21,   20,   17,
-       16,   15,   14,   13,   12,   11,    8,    7,   31,    3,
-       31,   31,   31,   31,   31,   31,   31,   31,   31,   31,
-       31,   31,   31,   31,   31
+        4,    5,    6,    7,    8,    3,    8,    8,    8
     } ;
 
-static const flex_int16_t yy_chk[56] =
+static const flex_int16_t yy_chk[10] =
     {   0,
-       32,   15,   15,   22,   22,    0,    7,    0,    7,   23,
-       23,    0,    1,    2,    1,    2,   26,   26,   27,   27,
-       29,   25,   24,   21,   20,   19,   18,   17,   16,   14,
-       13,   12,   11,   10,    9,    8,    6,    5,    3,   31,
-       31,   31,   31,   31,   31,   31,   31,   31,   31,   31,
-       31,   31,   31,   31,   31
+        1,    1,    1,    9,    3,    8,    8,    8,    8
     } ;
 
 static yy_state_type yy_last_accepting_state;
@@ -457,19 +437,11 @@ int yy_flex_debug = 0;
 #define YY_MORE_ADJ 0
 #define YY_RESTORE_YY_MORE_OFFSET
 char *yytext;
-#line 1 "macro.lex"
-#line 6 "macro.lex"
-#include <time.h>
-
-void printDay(int offset){
-    char date[32];
-    time_t t = time(NULL) + offset * 86400;
-    strftime(date, 32, "%d %B", localtime(&t));
-    printf("%s", date);
-}
-
-#line 471 "macro.c"
-#line 472 "macro.c"
+#line 1 "erotima10.lex"
+#line 2 "erotima10.lex"
+#include <ctype.h>
+#line 443 "erotima10.c"
+#line 444 "erotima10.c"
 
 #define INITIAL 0
 
@@ -686,9 +658,9 @@ YY_DECL
 		}
 
 	{
-#line 17 "macro.lex"
+#line 8 "erotima10.lex"
 
-#line 691 "macro.c"
+#line 663 "erotima10.c"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -715,13 +687,13 @@ yy_match:
 			while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 				{
 				yy_current_state = (int) yy_def[yy_current_state];
-				if ( yy_current_state >= 32 )
+				if ( yy_current_state >= 9 )
 					yy_c = yy_meta[yy_c];
 				}
 			yy_current_state = yy_nxt[yy_base[yy_current_state] + yy_c];
 			++yy_cp;
 			}
-		while ( yy_base[yy_current_state] != 40 );
+		while ( yy_base[yy_current_state] != 6 );
 
 yy_find_action:
 		yy_act = yy_accept[yy_current_state];
@@ -747,41 +719,36 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 18 "macro.lex"
-printDay(0);
+#line 9 "erotima10.lex"
+{
+        int c = atoi(yytext);
+        int buffer[50];
+        int i=0;
+        while (c>0){
+            buffer[i] = c%2;
+            c /= 2;
+            i++;
+        }
+        i--;
+        while(i>=0){
+            printf("%d", buffer[i]);
+            i--;
+        }
+    }
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 19 "macro.lex"
-printDay(-1);
+#line 24 "erotima10.lex"
+{
+    printf("%c",toupper(*yytext));
+    }
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 20 "macro.lex"
-printDay(1);
-	YY_BREAK
-case 4:
-YY_RULE_SETUP
-#line 21 "macro.lex"
-{ 
-                    char* c = strchr(yytext, '+');
-                    printDay(atoi(c));
-                }
-	YY_BREAK
-case 5:
-YY_RULE_SETUP
-#line 25 "macro.lex"
-{ 
-                    char* c = strchr(yytext, '-');
-                    printDay(atoi(c));
-                }
-	YY_BREAK
-case 6:
-YY_RULE_SETUP
-#line 29 "macro.lex"
+#line 27 "erotima10.lex"
 ECHO;
 	YY_BREAK
-#line 784 "macro.c"
+#line 751 "erotima10.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1078,7 +1045,7 @@ static int yy_get_next_buffer (void)
 		while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 			{
 			yy_current_state = (int) yy_def[yy_current_state];
-			if ( yy_current_state >= 32 )
+			if ( yy_current_state >= 9 )
 				yy_c = yy_meta[yy_c];
 			}
 		yy_current_state = yy_nxt[yy_base[yy_current_state] + yy_c];
@@ -1106,11 +1073,11 @@ static int yy_get_next_buffer (void)
 	while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 		{
 		yy_current_state = (int) yy_def[yy_current_state];
-		if ( yy_current_state >= 32 )
+		if ( yy_current_state >= 9 )
 			yy_c = yy_meta[yy_c];
 		}
 	yy_current_state = yy_nxt[yy_base[yy_current_state] + yy_c];
-	yy_is_jam = (yy_current_state == 31);
+	yy_is_jam = (yy_current_state == 8);
 
 		return yy_is_jam ? 0 : yy_current_state;
 }
@@ -1786,8 +1753,11 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 29 "macro.lex"
+#line 27 "erotima10.lex"
 
-int main(){
+
+int main()
+{
     yylex();
 }
+
