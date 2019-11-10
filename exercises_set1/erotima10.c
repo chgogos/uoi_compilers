@@ -5,7 +5,6 @@
 
 int match(char *next)
 {
-    goto S0;
 
 S0:
     if (*next == '\0')
