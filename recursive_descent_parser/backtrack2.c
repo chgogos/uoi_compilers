@@ -85,9 +85,10 @@ int r()
   return 0;
 }
 
-void main()
+int main()
 {
-  next = "((((x*x)*x)*x)*x)";
+  // next = "((((x*x)*x)*x)*x)";
+  next = "((((x*x)*x)*x)*x";  // syntax error
   printf("%i\n", e());
   printf("%i\n", calls);
 }
