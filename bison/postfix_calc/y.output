@@ -1,0 +1,153 @@
+Grammar
+
+    0 $accept: S $end
+
+    1 S: S E '\n'
+    2  | error '\n'
+
+    3 E: E E '+'
+    4  | E E '-'
+    5  | E E '*'
+    6  | E E '/'
+    7  | T_Int
+
+
+Terminals, with rules where they appear
+
+    $end (0) 0
+    '\n' (10) 1 2
+    '*' (42) 5
+    '+' (43) 3
+    '-' (45) 4
+    '/' (47) 6
+    error (256) 2
+    T_Int (258) 7
+
+
+Nonterminals, with rules where they appear
+
+    $accept (9)
+        on left: 0
+    S (10)
+        on left: 1 2
+        on right: 0 1
+    E (11)
+        on left: 3 4 5 6 7
+        on right: 1 3 4 5 6
+
+
+State 0
+
+    0 $accept: . S $end
+
+    error  shift, and go to state 1
+
+    S  go to state 2
+
+
+State 1
+
+    2 S: error . '\n'
+
+    '\n'  shift, and go to state 3
+
+
+State 2
+
+    0 $accept: S . $end
+    1 S: S . E '\n'
+
+    $end   shift, and go to state 4
+    T_Int  shift, and go to state 5
+
+    E  go to state 6
+
+
+State 3
+
+    2 S: error '\n' .
+
+    $default  reduce using rule 2 (S)
+
+
+State 4
+
+    0 $accept: S $end .
+
+    $default  accept
+
+
+State 5
+
+    7 E: T_Int .
+
+    $default  reduce using rule 7 (E)
+
+
+State 6
+
+    1 S: S E . '\n'
+    3 E: E . E '+'
+    4  | E . E '-'
+    5  | E . E '*'
+    6  | E . E '/'
+
+    T_Int  shift, and go to state 5
+    '\n'   shift, and go to state 7
+
+    E  go to state 8
+
+
+State 7
+
+    1 S: S E '\n' .
+
+    $default  reduce using rule 1 (S)
+
+
+State 8
+
+    3 E: E . E '+'
+    3  | E E . '+'
+    4  | E . E '-'
+    4  | E E . '-'
+    5  | E . E '*'
+    5  | E E . '*'
+    6  | E . E '/'
+    6  | E E . '/'
+
+    T_Int  shift, and go to state 5
+    '+'    shift, and go to state 9
+    '-'    shift, and go to state 10
+    '*'    shift, and go to state 11
+    '/'    shift, and go to state 12
+
+    E  go to state 8
+
+
+State 9
+
+    3 E: E E '+' .
+
+    $default  reduce using rule 3 (E)
+
+
+State 10
+
+    4 E: E E '-' .
+
+    $default  reduce using rule 4 (E)
+
+
+State 11
+
+    5 E: E E '*' .
+
+    $default  reduce using rule 5 (E)
+
+
+State 12
+
+    6 E: E E '/' .
+
+    $default  reduce using rule 6 (E)
